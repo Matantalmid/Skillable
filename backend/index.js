@@ -1,11 +1,11 @@
-const {app} = require("./app")
-const mongoose=require("mongoose")
+const { app } = require("./app");
+const mongoose = require("mongoose");
 
-const {config}=require("./config")
-const {MONGO_URL}=config
+const { config } = require("./config");
+const { MONGO_URL, LOCAL_MONGO_URL } = config;
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(MONGO_URL)
   .then(() => {
     console.log("connected to db");
   })
@@ -13,7 +13,6 @@ mongoose
     console.log(err);
   });
 
- 
 const PORT = process.env.PORT || 1010;
 app.listen(PORT, () => {
   console.log(`the server is running on port ${PORT}`);

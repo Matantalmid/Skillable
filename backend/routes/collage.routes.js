@@ -1,26 +1,21 @@
-const { Router } = require("express")
+const { Router } = require("express");
+const { createCollege, getAllColleges, getCollegeById, updateCollege, deleteCollege } = require("../controllers/collage.controller");
 const router = Router();
 
-//Create a new college  
-// router.post('/', createNewCollege);
 
-// register
-router.post("/register", register);
+//^ create new collage
+router.post("/", createCollege);
 
-//login
-router.post("/login", login);
-
-//get all colleges
+//^get all colleges
 router.get("/", getAllColleges);
 
-//get a college by id
-router.get("/:id", getCollegeById);
+//^get a college by id
+router.get("/college/:id", getCollegeById);
 
-//update college by id
-router.patch("/:id", updateCollegeById);
+//^update college by id
+router.patch("/:id", updateCollege);
 
-//delete college by id
-router.delete("/:id", deleteCollegeById);
-
+//^delete college by id
+router.delete("/:id", deleteCollege);
 
 module.exports = router;

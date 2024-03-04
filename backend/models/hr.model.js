@@ -14,5 +14,5 @@ const hrSchema = new mongoose.Schema({
   company: { type: String },
 });
 
-const Hr = mongoose.model("Hr", hrSchema);
-module.exports = { Hr };
+const HR = mongoose.model("Hr", hrSchema);
+module.exports = { HR};
