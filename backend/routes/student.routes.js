@@ -4,10 +4,10 @@ const router = Router();
 //Create a new student
 router.post('/', createNewStudent);
 
-//^ register
-router.post("/register", register);
+//register
+// router.post("/register", register);
 
-//^ login
+//login
 router.post("/login", login);
 
 //get a student by id
