@@ -1,10 +1,11 @@
 const {app} = require("./app")
 const mongoose=require("mongoose")
-// const {config}=require("./config")
-// const {MONGO_URL}=config
+
+const {config}=require("./config")
+const {MONGO_URL}=config
 
 mongoose
-  .connect("mongodb+srv://ofekmajardev:XL8B5YSnn18B5Ya3@cluster0.ws5izty.mongodb.net/Skillable?retryWrites=true&w=majority&appName=Cluster0")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("connected to db");
   })
