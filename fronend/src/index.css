@@ -1,0 +1,65 @@
+:root {
+  --mainBlueColor: #40d2db;
+  --mainPurpleColor: #6940db;
+  --mainPinkColor: #db40b9;
+  --backgroundColor: #f9f9fb;
+  --blackColor: #1c1f3c;
+  /** now all of the purple colors  */
+  --lightPurple90p: #6940dbe6;
+  --lightPurple60p: #6940db99;
+  --lightpurple30p: #6940db4d;
+  /** now all of the margins */
+  --smallMargin: 16px 0px;
+  --tabsMargin: 32px 0px;
+  --contentMargin: 64px 0px;
+  --contentGaps: 24px;
+}
+
+h1 {
+  /* font-family: Assistant; */
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: right;
+  color: var(--blackColor);
+}
+h2 {
+  /* font-family: Assistant; */
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: right;
+  color: var(--blackColor);
+}
+h3 {
+  /* font-family: Assistant; */
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: right;
+  color: var(--blackColor);
+}
+.bodyText {
+  /* font-family: Assistant; */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+  color: var(--blackColor);
+}
+
+.smallBodyTexy {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+  color: var(--blackColor);
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  color: var(--blackColor);
+}
