@@ -1,4 +1,5 @@
 const { Collage } = require("../models/collage.model");
+const { Staff } = require("../models/staff.model");
 
 //^ get All Colleges
 const getAllColleges = async (req, res) => {
@@ -24,6 +25,17 @@ const getCollegeById = async (req, res) => {
   }
 };
 
+//^ get all college staff
+const getAllCollegeStaff = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const staff = await Staff.find({ college: id });
+    if (staff) return res.send(staff);
+    return res
+      .status(404)
+      .send("the collage has no staff or there is no college");
+  } catch (error) {}
+};
 //^ create
 const createCollege = async (req, res) => {
   const { body } = req;
@@ -68,4 +80,5 @@ module.exports = {
   createCollege,
   updateCollege,
   deleteCollege,
+  getAllCollegeStaff,
 };
