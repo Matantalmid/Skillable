@@ -12,7 +12,8 @@ const hrSchema = new mongoose.Schema({
     linkedin: { type: String },
   },
   company: { type: String },
+  jobs: [{ type: mongoose.Types.ObjectId, ref: "Job" }],
 });
 
 const HR = mongoose.model("Hr", hrSchema);
-module.exports = { HR};
+module.exports = { HR };
