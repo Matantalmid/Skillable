@@ -3,8 +3,33 @@
   height: 204px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 32px;
   border-radius: 24px;
   gap: 4px;
   background-color: #fff;
+}
+
+.containerOne {
+  width: 127px;
+  height: 88px;
+}
+.containerOne svg {
+  margin: 0 0 25px 0;
+  height: 20px;
+}
+
+.containerOne h4 {
+  height: 48px;
+  font-weight: 600;
+}
+
+.containerOne h4 span {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.container p {
+  color: #8792a1;
+  line-height: 24px;
 }

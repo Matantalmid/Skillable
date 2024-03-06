@@ -29,11 +29,18 @@
 
 .btn {
   width: 173px;
-  height: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f0ecfb;
   border: none;
   border-radius: 25px;
   padding: 10px 24px 10px 16px;
   color: #6940db;
+  font-size: 16px;
   font-weight: 600;
+}
+.btn svg {
+  color: #6940db;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Welcome.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import AddJob from "../../../icons/AddJob";
 
 function Welcome() {
   return (
@@ -18,8 +19,7 @@ function Welcome() {
           </p>
         </div>
         <button className={styles.btn}>
-          יש לי משרה חדשה{" "}
-          <FontAwesomeIcon icon={faShoppingBag} style={{ color: "#6940DB" }} />
+          יש לי משרה חדשה <AddJob />
         </button>
       </div>
     </>
