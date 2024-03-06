@@ -11,7 +11,8 @@ function AllJobsList() {
         <div className={styles.professionCategory}>מקצוע</div>
         <div className={styles.submitedCategory}>הוגשו</div>
         <div className={styles.statusCategory}>סטטוס</div>
-        <div className={styles.dateCategory}> תאריך
+        <div className={styles.dateCategory}>
+          תאריך
           <ArrowDown />
         </div>
         <div className={styles.editCategory}>עריכה</div>
