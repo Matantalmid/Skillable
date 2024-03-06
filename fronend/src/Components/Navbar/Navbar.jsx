@@ -17,7 +17,7 @@ function Navbar() {
             <h1 className={styles.headline}>Skillable</h1>
             <div className={styles.linksContainer}>
               <Link to="/">ראשי</Link>
-              <Link to="/">בןגרים</Link>
+              <Link to="/">בוגרים</Link>
               <Link to="/">חברות</Link>
               <Link to="/">משרות</Link>
               <Link to="/">דיווחים</Link>
