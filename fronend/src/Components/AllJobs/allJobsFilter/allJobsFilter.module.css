@@ -1,0 +1,46 @@
+.allJobsFiter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .jobsFilterBtncontainer {
+    display: flex;
+    height: 44px;
+    gap: 24px;
+  }
+  .jobFilterBtn {
+    cursor: pointer;
+    border: none;
+    width: 80x;
+    height: 44px;
+    border-radius: 8px;
+    background-color: var(--backgroundColor);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #8792a1;
+  }
+  .chosenFilter {
+    background-color: #f0ecfb;
+    color: var(--mainPurpleColor);
+    border-radius: 25px;
+    width: 155px;
+    height: 44px;
+  }
+  .newJobBtn {
+    cursor: pointer;
+    width: 173px;
+    height: 44px;
+    border-radius: 25px;
+    background-color: #6940db;
+    color: #ffffff;
+    font-size: var(--btnSize);
+    font-weight: var(--btnWidth);
+    line-height: var(--btnLineHeight);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
