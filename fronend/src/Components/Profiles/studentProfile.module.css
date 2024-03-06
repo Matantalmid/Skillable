@@ -1,0 +1,92 @@
+.firstContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  height: 176px;
+  background: #ffffff;
+  border-bottom: 2px solid #d2c6f4;
+  border-radius: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.firstContainer .rightSide {
+  display: flex;
+  width: 40%;
+  height: 112px;
+  gap: 24px;
+  align-items: center;
+}
+.imgContainer {
+  width: 112px;
+  height: 112px;
+  border: 2px;
+  border-radius: 50%;
+  background-image: url(https://s3-alpha-sig.figma.com/img/c29d/992e/290d0b95ab983596a7e281eef53f8bd8?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NLjQvtMh093PiheQCe-8rr8NxmTX7JYY-08Vei6ARWvBEyDqn3m9pFys886C97KF0uhy9DK0sYvTzROvvp0X4k7jXcLgFTk9-Z1Z7T~6iGLSnSDpcQPlYe2eUvJx7qfxRfN6oewCLQ~HnujSy18LUg-RAp3WYje2nSC6WHdcmH-J0yuiM0YljkD0aOQOKpBBk4BFyW5Y4IY0ar~Av8vPxqS47yYOL7rVaqlYY9bvDYPYkeihctlnZnhRyajpEX-hzwnIZiUYjalPi9bs33PGU9wYBzac-eimxlw9LjSGIKr4~s4bebv~DuS3Q3Hw9Xd4jELgruw5oM~Vh02IIOAaNQ__);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.imgContainer svg {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.nameAndProfession {
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  justify-content: center;
+}
+.name {
+  color: var(--mainPurpleColor);
+}
+/*^ left side of the first container  */
+.firstContainer .leftSide {
+  display: flex;
+  width: 55%;
+  height: 112px;
+  justify-content: space-around;
+}
+.workPref {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.workPref div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cvBtn {
+  background-color: #f0ecfb;
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 10px 16px;
+  border-radius: 25px;
+  gap: 8px;
+  cursor: pointer;
+}
+.interviewMe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.interviewMeBtn {
+  background-color: var(--mainPurpleColor);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 10px 16px;
+  border-radius: 25px;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+}
