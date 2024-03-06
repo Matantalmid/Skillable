@@ -1,13 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   width: 405px;
   height: 276px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 20px;
   background: #fff;
   padding: 36px;
   border-radius: 24px;
-  border-bottom: 2px solid #6940db;
+  border-bottom: 2px solid var(--mainPurpleColor);
 }
 
 .headline {
@@ -19,12 +23,17 @@
   font-weight: 400;
 }
 
+.pContainer p {
+  height: 96px;
+}
+
 .btn {
-  width: 33%;
-  height: 30px;
+  width: 173px;
+  height: 44px;
   background-color: #f0ecfb;
   border: none;
   border-radius: 25px;
-  padding: 10px, 24px, 10px, 16px;
+  padding: 10px 24px 10px 16px;
   color: #6940db;
+  font-weight: 600;
 }

@@ -1,0 +1,45 @@
+.jobsStatusContainer {
+  width: 405px;
+  height: 299px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 24px 32px;
+  border-radius: 24px;
+  gap: 16px;
+  background-color: #fff;
+  border-bottom: 2px solid var(--mainPurpleColor);
+}
+
+.containerOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerOne select {
+  border: none;
+}
+
+.containerTwo {
+  display: flex;
+  align-items: center;
+}
+
+.containerTwo svg {
+  margin: 0 0 0 5px;
+}
+
+.containerTwo span {
+  margin: 0 0 0 20px;
+  font-weight: 400;
+  color: #8792A1;
+}
+
+.containerThree {
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+}
+.containerThree img {
+  width: 80%;
+  height: 200px;
+}
