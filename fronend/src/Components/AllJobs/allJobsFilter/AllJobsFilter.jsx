@@ -50,7 +50,9 @@ function AllJobsFilter({ filter, setFilter }) {
           הודחו (1)
         </button>
       </div>
-      <button className={styles.newJobBtn}>יש לי משרה חדשה {<AddJob />}</button>
+      <button className={styles.newJobBtn}>
+        יש לי משרה חדשה {<AddJob color={"white"} />}
+      </button>
     </section>
   );
 }
