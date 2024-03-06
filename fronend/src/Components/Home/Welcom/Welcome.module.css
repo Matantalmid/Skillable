@@ -1,0 +1,30 @@
+.container {
+  width: 405px;
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background: #fff;
+  padding: 36px;
+  border-radius: 24px;
+  border-bottom: 2px solid #6940db;
+}
+
+.headline {
+  color: #6940db;
+  font-weight: 400;
+}
+
+.pContainer {
+  font-weight: 400;
+}
+
+.btn {
+  width: 33%;
+  height: 30px;
+  background-color: #f0ecfb;
+  border: none;
+  border-radius: 25px;
+  padding: 10px, 24px, 10px, 16px;
+  color: #6940db;
+}
