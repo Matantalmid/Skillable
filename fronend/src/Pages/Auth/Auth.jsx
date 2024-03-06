@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-// import { UserContext } from "../../context/User";
+import { UserContext } from "../../Context/User";
 import Login from "../../Components/Auth/LogIn";
 import SignUp from "../../Components/Auth/SignUp";
 import { useNavigate } from "react-router-dom";
-import {baseUrl} from '../../utils/backEndUtils';
+import { baseUrl } from "../../utils/backEndUtils";
 
 export default function Auth() {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [formData, setFormData] = useState({});
-  const [error,setError]=useState()
-  const {enteredAs, setEnteredAs} = useState("");
-//   const { user, getUserFromDb, setUser } = useContext(UserContext);
+  const [error, setError] = useState();
+  const [enteredAs, setEnteredAs] = useState("");
+    const { user, getUserFromDb, setUser } = useContext(UserContext);
   const naviagte = useNavigate();
-  
+
   //^switching from Login and SignUp
   const toggleMode = () => {
     setIsLoginMode(!isLoginMode);
@@ -23,11 +23,9 @@ export default function Auth() {
   const changeHandler = (e) => {
     formData[e.target.name] = e.target.value;
     setFormData({ ...formData });
-    
-
-    const EnteredAsHandler = (e) => {
+  };
+  const EnteredAsHandler = (e) => {
     setEnteredAs(e.target.value);
-    };
   };
 
   //^ handling the login method
@@ -51,6 +49,7 @@ export default function Auth() {
       } else {
         // Handle other errors
         console.log("An error occurred:", error.message);
+
       }
     }
   };
@@ -66,7 +65,7 @@ export default function Auth() {
         fullName,
       });
       const data = res.data;
-      localStorage.setItem("hosafti_user_token", data.token);
+      localStorage.setItem("userToken", data.token);
       setUser(data.user);
       naviagte("/");
     } catch (error) {
@@ -74,21 +73,22 @@ export default function Auth() {
     }
   };
 
- 
   return (
     <div>
       {isLoginMode ? (
-        <Login          
-        sumbitHandler={loginHandler}
-        changeHandler={changeHandler}
-        toggleMode={toggleMode}
-        error={error}
+        <Login
+          sumbitHandler={loginHandler}
+          changeHandler={changeHandler}
+          toggleMode={toggleMode}
+          EnteredAsHandler={EnteredAsHandler}
+          error={error}
         />
       ) : (
         <SignUp
           sumbitHandler={signUpHandler}
           changeHandler={changeHandler}
           toggleMode={toggleMode}
+          EnteredAsHandler={EnteredAsHandler}
           error={error}
         />
       )}

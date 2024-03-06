@@ -22,18 +22,26 @@
   color: var(--blackColor);
   color: #8792a1;
 }
+.companyCategory {
+  width: 5%;
+}
 .jobCategory {
-  width: 553px;
+  width: 45%;
 }
 .professionCategory {
-  width: 160px;
+  width: 15%;
 }
 .submitedCategory {
-  width: 72px;
+  width: 10%;
 }
 .statusCategory {
-  width: 80px;
+  width: 10%;
 }
 .dateCategory {
-  width: 60dpx;
+  width: 8%;
+  display: flex;
+  align-items: center;
+}
+.editCategory {
+  width: 7%;
 }
