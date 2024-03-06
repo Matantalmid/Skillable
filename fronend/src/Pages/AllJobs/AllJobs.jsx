@@ -7,7 +7,7 @@ function AllJobs() {
   return (
     <div>
       <h2>כל המשרות</h2>
-      {/* <AllJobsFilter setFilter={setFilter} filter={filter} /> */}
+      <AllJobsFilter setFilter={setFilter} filter={filter} />
       <div>
         <AllJobsList />
       </div>

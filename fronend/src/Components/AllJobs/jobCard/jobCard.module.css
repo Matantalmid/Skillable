@@ -1,0 +1,37 @@
+.jobCard {
+  display: flex;
+  gap: 32px;
+  border: 0 solid #efefef;
+border-bottom-width: 1px;
+
+}
+z .companyImg {
+  width: 40px;
+  height: 40px;
+}
+.jobNameAndDesc {
+  display: flex;
+  flex-direction: column;
+  width: 553px;
+}
+.jobName {
+}
+.jobDesc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profession {
+  width: 160px;
+}
+.amountSubmited {
+  width: 72px;
+}
+.status {
+  width: 80px;
+}
+.date {
+  width: 60px;
+}
+.edit {
+}
