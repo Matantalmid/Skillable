@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Welcome.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 function Welcome() {
   return (
@@ -10,10 +12,15 @@ function Welcome() {
           <p>
             שמחים שחזרת! המקום למצוא את הטאלנטים הטובים ביותר, משרה שתתפרסם כאן
             תאוייש במהרה
+            <br />
+            <br />
+            !אז לנו נשאר לאחל בהצלחה
           </p>
-          <p>אז לנו נשאר לאחל בהצלחה</p>
         </div>
-        <button className={styles.btn}>יש לי משרה חדשה</button>
+        <button className={styles.btn}>
+          יש לי משרה חדשה{" "}
+          <FontAwesomeIcon icon={faShoppingBag} style={{ color: "#6940DB" }} />
+        </button>
       </div>
     </>
   );

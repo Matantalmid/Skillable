@@ -1,0 +1,39 @@
+.jobListCategories {
+  display: flex;
+  align-items: center;
+
+  padding: 16px 0px 16px 32px;
+  gap: 10px;
+
+  height: 56px;
+
+  /* light gray */
+  border-bottom: 1px solid #efefef;
+}
+.dateCategory
+  .jobCategory
+  .professionCategory
+  .statusCategory
+  .submitedCategory {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+  color: var(--blackColor);
+  color: #8792a1;
+}
+.jobCategory {
+  width: 553px;
+}
+.professionCategory {
+  width: 160px;
+}
+.submitedCategory {
+  width: 72px;
+}
+.statusCategory {
+  width: 80px;
+}
+.dateCategory {
+  width: 60dpx;
+}
