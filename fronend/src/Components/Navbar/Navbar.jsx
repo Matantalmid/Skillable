@@ -19,7 +19,7 @@ function Navbar() {
               <Link to="/">ראשי</Link>
               <Link to="/">בוגרים</Link>
               <Link to="/">חברות</Link>
-              <Link to="/">משרות</Link>
+              <Link to="/jobs">משרות</Link>
               <Link to="/">דיווחים</Link>
             </div>
           </div>
