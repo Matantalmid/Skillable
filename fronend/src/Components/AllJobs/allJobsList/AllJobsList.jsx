@@ -3,13 +3,11 @@ import styles from "./allJobsList.module.css";
 import ArrowDown from "../../../icons/ArrowDown";
 import JobCard from "../jobCard/JobCard";
 
-function AllJobsList() {
-  const [jobs, setJobs] = useState([{ d: "S" }]);
-  console.log(jobs);
+function AllJobsList({jobs}) {
   return (
     <div>
       <section className={styles.jobListCategories}>
-        <div className={styles.companyCategory}></div>
+        {/* <div className={styles.companyCategory}></div> */}
         <div className={styles.jobCategory}>משרה ותיאור</div>
         <div className={styles.professionCategory}>מקצוע</div>
         <div className={styles.submitedCategory}>הוגשו</div>
@@ -21,9 +19,8 @@ function AllJobsList() {
         <div className={styles.editCategory}>עריכה</div>
       </section>
       <div>
-        {" "}
-        {jobs.map(() => {
-          return <JobCard />;
+        {jobs.map((job) => {
+          return <JobCard job={job} />;
         })}
       </div>
     </div>

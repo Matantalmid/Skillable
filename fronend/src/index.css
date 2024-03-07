@@ -43,6 +43,15 @@ h3 {
   text-align: right;
   color: var(--blackColor);
 }
+
+h4 {
+  /* font-family: Assistant; */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+  color: var(--blackColor);
+}
 .bodyText {
   /* font-family: Assistant; */
   font-size: 16px;
@@ -60,10 +69,12 @@ h3 {
   color: var(--blackColor);
 }
 
-.button {
+button {
+  border: none;
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   text-align: right;
   color: var(--blackColor);
+  border: none;
 }

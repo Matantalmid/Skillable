@@ -1,0 +1,31 @@
+.container {
+  width: 789px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterBtn {
+  width: 123px;
+  height: 44px;
+  margin-left: 8px;
+  padding: 10px 24px 10px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8792a1;
+  cursor: pointer;
+  background-color: var(--backgroundColor);
+}
+.chosenFilter {
+  background-color: #f0ecfb;
+  color: var(--mainPurpleColor);
+}
+
+.container select {
+  width: 405px;
+  height: 44px;
+  padding: 0px 16px 0px 16px;
+  border-radius: 50px;
+  border: none;
+}
