@@ -18,7 +18,7 @@ router.post("/", register);
 router.post("/login", login);
 
 //^ get a student by id
-router.get("/:id", getStudentById);
+router.get("/student/:id", getStudentById);
 
 //^ get all students
 router.get("/", getAllStudents);
