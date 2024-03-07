@@ -11,9 +11,8 @@ export default function Auth() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState();
   const [enteredAs, setEnteredAs] = useState("");
-    const { user, getUserFromDb, setUser } = useContext(UserContext);
+  const { user, getUserFromDb, setUser } = useContext(UserContext);
   const naviagte = useNavigate();
-
   //^switching from Login and SignUp
   const toggleMode = () => {
     setIsLoginMode(!isLoginMode);
@@ -38,8 +37,9 @@ export default function Auth() {
         password,
       });
       const token = res.data;
-      localStorage.setItem("userToken", token);
+      localStorage.setItem("skillable_user_token", token);
       await getUserFromDb();
+      console.log("logged in");
       naviagte("/");
     } catch (error) {
       if (error.response && error.response.status === 401) {
@@ -49,27 +49,28 @@ export default function Auth() {
       } else {
         // Handle other errors
         console.log("An error occurred:", error.message);
-
       }
     }
   };
 
   //^ handling the signUp method
   const signUpHandler = async (e) => {
-    const { email, password, fullName } = formData;
+    const { email, password, firstName, lastName } = formData;
     e.preventDefault();
     try {
       const res = await axios.post(`${baseUrl}/${enteredAs}/register`, {
         email,
         password,
-        fullName,
+        firstName,
+        lastName,
       });
       const data = res.data;
-      localStorage.setItem("userToken", data.token);
-      setUser(data.user);
-      naviagte("/");
+      localStorage.setItem("skillable_user_token", data.token);
+      // setUser(data.user);
+      // naviagte("/");
+      console.log("registered");
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
     }
   };
 

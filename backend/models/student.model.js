@@ -7,6 +7,7 @@ const studentSchema = new mongoose.Schema({
   email: { type: String, require: true },
   profession: { type: String },
   coverImg: { type: String },
+  applyJobs: [{type: mongoose.Types.ObjectId, ref:"job" }],
   softSkills: [{ skills: { type: String }, rate: { type: Number } }],
   techSkills: [{ skills: { type: String }, rate: { type: Number } }],
   workExp: [

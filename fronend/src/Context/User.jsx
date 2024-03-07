@@ -6,16 +6,18 @@ export const UserContext = createContext({});
 
 export default function UserProvider({ children }) {
   const [user, setUser] = useState();
-  
+  console.log(user);
+
   const getUserFromDb = async () => {
     try {
-      const token = localStorage.getItem("userToken");
+      const token = localStorage.getItem("skillable_user_token");
       if (token != null) {
         const res = await axios.patch(
           `${baseUrl}/tokenManipulation/tokenDecryptor`,
           { token }
         );
         const userData = res.data;
+        console.log(res);
         setUser(userData);
       } else {
         console.log("no user history");
@@ -30,7 +32,7 @@ export default function UserProvider({ children }) {
   }, []);
 
   const logOutHandler = () => {
-    localStorage.removeItem("userToken");
+    localStorage.removeItem("skillable_user_token");
     setUser();
   };
 

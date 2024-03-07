@@ -9,10 +9,13 @@ export default function SignUp({ sumbitHandler, changeHandler, toggleMode,Entere
         <h1>הרשמה</h1>
         <form onSubmit={sumbitHandler}>
           <div>
-            <label htmlFor="userNameInput">שם מלא:</label>
-            <input onChange={changeHandler} type="text" name="fullName" id="userNameInput" required />
+            <label htmlFor="userNameInput">שם פרטי:</label>
+            <input onChange={changeHandler} type="text" name="firstName" id="userNameInput" required />
           </div>
-
+          <div>
+            <label htmlFor="userNameInput">שם משפחה:</label>
+            <input onChange={changeHandler} type="text" name="lastName" id="userNameInput" required />
+          </div>
           <div>
       <label htmlFor="userEnteredAsInput">נכנס כ: {error === "user access is incorrect" && <span>גישה שגויה</span>}</label>
       <select
@@ -24,7 +27,7 @@ export default function SignUp({ sumbitHandler, changeHandler, toggleMode,Entere
         defaultValue=""
       >
         <option value="" disabled></option>
-        <option value="students" >סטודנט/ית</option>
+        {/* <option value="students" >סטודנט/ית</option> */} //! כרגע אי אפשר להירשם בתור סטונדט
         <option value="staff">סגל</option>
         <option value="hrs">מגייס/ת</option>
       </select>

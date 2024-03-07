@@ -29,17 +29,20 @@ const register = async (req, res) => {
     const token = generateToken({
       email: hr.email,
       id: hr._id,
-      role: "free",
+      role: "HR",
+      firstName,
+      lastName,
     });
 
-    await sendWelcomeEmail(hr.email, "welcome", { name: hr.fullName });
+    // await sendWelcomeEmail(hr.email, "welcome", { name: hr.fullName });
 
     return res.send({
       hr: {
         email,
         id: hr._id,
-        role: "free",
-        fullName: `${firstName} ${lastName}`,
+        role: "HR",
+        firstName,
+        lastName,
       },
       token,
     });
@@ -61,8 +64,9 @@ const login = async (req, res) => {
         const token = generateToken({
           email: hr.email,
           id: hr._id,
-          role: "free",
-          fullName: `${hr.firstName} ${hr.lastName}`,
+          role: "HR",
+          firstName: hr.firstName,
+          lastName: hr.lastName,
         });
         return res.send(token);
       }

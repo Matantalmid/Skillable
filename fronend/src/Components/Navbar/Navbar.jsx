@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,9 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Navbar.module.css";
+import { UserContext } from "../../Context/User";
 function Navbar() {
+  const { user } = useContext(UserContext);
   return (
     <>
       <header>
@@ -33,10 +35,17 @@ function Navbar() {
               <FontAwesomeIcon icon={faComment} style={{ color: "#000000" }} />
             </div>
             <div className={styles.userImage}>
-              <Link to={"Profile"}>
-                {" "}
-                <FontAwesomeIcon icon={faUser} style={{ color: "#B197FC" }} />
-              </Link>
+              {user ? (
+                <Link to={"/MyProfile"}>
+                  {" "}
+                  <FontAwesomeIcon icon={faUser} style={{ color: "#B197FC" }} />
+                </Link>
+              ) : (
+                <Link to={"/Auth"}>
+                  {" "}
+                  <FontAwesomeIcon icon={faUser} style={{ color: "#B197FC" }} />
+                </Link>
+              )}
             </div>
           </div>
         </div>
