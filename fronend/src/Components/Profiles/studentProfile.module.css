@@ -20,16 +20,17 @@
   gap: 24px;
   align-items: center;
 }
-.imgContainer {
+.imgContainer img {
   width: 112px;
   height: 112px;
   border: 2px;
   border-radius: 50%;
-  background-image: url(https://s3-alpha-sig.figma.com/img/c29d/992e/290d0b95ab983596a7e281eef53f8bd8?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NLjQvtMh093PiheQCe-8rr8NxmTX7JYY-08Vei6ARWvBEyDqn3m9pFys886C97KF0uhy9DK0sYvTzROvvp0X4k7jXcLgFTk9-Z1Z7T~6iGLSnSDpcQPlYe2eUvJx7qfxRfN6oewCLQ~HnujSy18LUg-RAp3WYje2nSC6WHdcmH-J0yuiM0YljkD0aOQOKpBBk4BFyW5Y4IY0ar~Av8vPxqS47yYOL7rVaqlYY9bvDYPYkeihctlnZnhRyajpEX-hzwnIZiUYjalPi9bs33PGU9wYBzac-eimxlw9LjSGIKr4~s4bebv~DuS3Q3Hw9Xd4jELgruw5oM~Vh02IIOAaNQ__);
-  background-size: cover;
+  /* background-image: url(); */
+  /* background-size: cover;
   background-position: center;
-  position: relative;
+  position: relative; */
 }
+
 .imgContainer svg {
   cursor: pointer;
   position: absolute;
@@ -71,7 +72,13 @@
   border-radius: 25px;
   gap: 8px;
   cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
 }
+
+.cvBtn:hover {
+  background-color: #d8d3e6; /* Change to a darker shade on hover */
+}
+
 .interviewMe {
   display: flex;
   flex-direction: column;
