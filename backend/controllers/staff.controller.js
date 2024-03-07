@@ -23,7 +23,13 @@ const register = async (req, res) => {
   }
   try {
     const hash = await bcrypt.hash(password, 10);
-    const staff = new Staff({ email, password: hash, firstName, lastName });
+    const staff = new Staff({
+      email,
+      password: hash,
+      firstName,
+      lastName,
+      role: "staff",
+    });
 
     await staff.save();
     const token = generateToken({
