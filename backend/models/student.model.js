@@ -7,7 +7,7 @@ const studentSchema = new mongoose.Schema({
   email: { type: String, require: true },
   profession: { type: String },
   coverImg: { type: String },
-  applyJobs: [{ type: mongoose.Types.ObjectId, ref: "job" }],
+  applyJobs: [{  type: mongoose.Types.ObjectId, ref:  "Job" }],
   softSkills: [{ skills: { type: String }, rate: { type: Number } }],
   techSkills: [{ skills: { type: String }, rate: { type: Number } }],
   workExp: [
@@ -41,7 +41,7 @@ const studentSchema = new mongoose.Schema({
   },
 
   contactInfo: { frame: { type: String }, location: { type: String } },
-  recruitmentStatus: { type: String }, //what is the recruitment status
+  recruitmentStatus: { type: String }, //the recruitment status
   about: {
     desc: { type: String },
     lang: { name: { type: String }, rate: { type: String } },
