@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  padding: 16px 16px 16px 32px;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+}
+
+.container p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#profileImg {
+  width: 10%;
+}
+
+#name {
+  width: 15%;
+}
+
+#profession {
+  width: 25%;
+}
+
+#position {
+  width: 30%;
+}
+
+#status {
+  width: 10%;
+}
+
+#message {
+  width: 10%;
+}

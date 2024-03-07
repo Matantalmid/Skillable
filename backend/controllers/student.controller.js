@@ -16,7 +16,7 @@ const getAllStudents = async (req, res) => {
 //^ register as Student 
 //? maybe we should do register idk :P
 const register = async (req, res) => {
-  const { email, password, firstName, lastName } = req.body;
+  const { email, password, firstName, lastName, applyJobs } = req.body;
 
   const isEmailUsed = await Student.findOne({ email });
   if (isEmailUsed) {
@@ -24,7 +24,7 @@ const register = async (req, res) => {
   }
   try {
     const hash = await bcrypt.hash(password, 10);
-    const student = new Student({ email, password: hash, firstName, lastName });
+    const student = new Student({ email, password: hash, firstName, lastName, applyJobs });
 
     await student.save();
     const token = generateToken({
@@ -33,7 +33,7 @@ const register = async (req, res) => {
       role: "free",
     });
 
-    await sendWelcomeEmail(student.email, "welcome", { name: student.fullName });
+    // await sendWelcomeEmail(student.email, "welcome", { name: student.fullName });
 
     return res.send({
       student: {
