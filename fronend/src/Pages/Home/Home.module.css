@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  gap: 23px;
+  margin: 50px 0 50px 0;
+}
+
+.containerOne{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.containerTwo{
+    display: flex;
+    gap: 23px;
+}

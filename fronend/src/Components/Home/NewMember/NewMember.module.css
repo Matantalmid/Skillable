@@ -1,0 +1,31 @@
+.container {
+  width: 191px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 24px;
+  gap: 4px;
+  background-color: #fff;
+}
+.container svg {
+  align-self: self-start;
+  margin: 0 0 25px 0;
+  height: 20px;
+}
+
+.container h4 {
+  height: 48px;
+  font-weight: 600;
+}
+
+.container h4 span {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.container p {
+  color: #8792a1;
+  line-height: 24px;
+}
