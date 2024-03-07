@@ -1,11 +1,13 @@
 import React from "react";
 import CreateSingleJobCard from "../../Components/SingleJob/SingleJobCard";
-import { useState, useEffect } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../Context/User";
 import axios from "axios";
 import { baseUrl } from "../../utils/backEndUtils";
 
 export default function CreateJobPage() {
   const [formData, setFormData] = useState({});
+  const { user } = useContext(UserContext);
 
   const handleChange = (e) => {
     formData[e.target.name] = e.target.value;
@@ -17,7 +19,7 @@ export default function CreateJobPage() {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await axios.post(`${baseUrl}/jobs`, {formData});
+      const res = await axios.post(`${baseUrl}/jobs`, {...formData,postedBy:user.id});
       const data = res.data;
     } catch (error) {
       console.log(error);
@@ -32,9 +34,3 @@ export default function CreateJobPage() {
   );
 }
 
-// const { name, value } = e.target;
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//     console.log(formData);

@@ -1,3 +1,4 @@
+const { HR } = require("../models/hr.model");
 const { Job } = require("../models/job.model");
 
 //^ get All Jobs
@@ -24,12 +25,17 @@ const getJobById = async (req, res) => {
   }
 };
 
+
 //^ create
 const createJob = async (req, res) => {
   const { body } = req;
-  console.log(body.formData);
+  console.log(body);
+  const {postedBy } = body
   try {
-    const newJob = new Job(body.formData);
+    const newJob = new Job(body);
+const hr=await HR.findById(postedBy)
+hr.jobs.push(newJob._id);
+await hr.save()
     await newJob.save();
     return res.send(newJob);
   } catch (error) {
@@ -37,6 +43,7 @@ const createJob = async (req, res) => {
     res.status(400).send("Error");
   }
 };
+
 
 //^ update
 const updateJob = async (req, res) => {
