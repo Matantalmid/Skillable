@@ -11,12 +11,13 @@
 .detailsContainer {
   display: flex;
   width: 45%;
+  gap: 10px;
 }
 .companyImg img {
   width: 40px;
   height: 40px;
 }
-.jobName{
+.jobName {
   cursor: pointer;
 }
 .jobNameAndDesc {
@@ -44,7 +45,7 @@
   padding: 4px 14px 4px 12px;
   border-radius: 25px;
   text-align: center;
-  background-color: #F0ECFB;
+  background-color: #f0ecfb;
   color: var(--mainPurpleColor);
 }
 .date {

@@ -13,7 +13,7 @@ function JobCard({ job }) {
           />
         </div>
         <div className={styles.jobNameAndDesc}>
-          <h4 className={styles.jobName}>Need to add job name to DB</h4>
+          <h4 className={styles.jobName}>{job.name}</h4>
           <p className={styles.jobDesc}>{job.description}</p>
         </div>
       </div>
