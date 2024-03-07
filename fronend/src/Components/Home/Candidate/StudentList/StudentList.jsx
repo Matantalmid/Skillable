@@ -6,11 +6,12 @@ function StudentLIst() {
     <>
       <div className={styles.container}>
         <div className={styles.containerOne}>
-          <p>שם</p>
-          <p>מקצוע</p>
-          <p>המשרה</p>
-          <p>סטטוס</p>
-          <p>הודעה</p>
+          <p id={styles.profileImg}></p>
+          <p id={styles.name}>שם</p>
+          <p id={styles.profession}>מקצוע</p>
+          <p id={styles.position}>המשרה</p>
+          <p id={styles.status}>סטטוס</p>
+          <p id={styles.message}>הודעה</p>
         </div>
         <div className={styles.containerTwo}>
           <StudentListCard />
