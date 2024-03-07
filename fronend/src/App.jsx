@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllJobs from "./Pages/AllJobs/AllJobs";
 import Auth from "./Pages/Auth/Auth";
 import Profile from "./Pages/Profile/Profile";
+import CreateJobPage from "./Pages/SingleJob/createSingleJob";
 
 function App() {
   return (
@@ -15,8 +16,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/Auth" element={<Auth />} />
+            
             <Route path="/" element={<Home />} />
+            
             <Route path="/Jobs" element={<AllJobs />} />
+            
+            <Route path="/CreateJobPage" element={<CreateJobPage />} />
+
             <Route path="/Profile" element={<Profile />} />
           </Routes>
         </main>
