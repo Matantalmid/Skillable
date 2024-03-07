@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllJobs from "./Pages/AllJobs/AllJobs";
 import Auth from "./Pages/Auth/Auth";
 import Profile from "./Pages/Profile/Profile";
+import MyProfile from "./Pages/Profile/MyProfile";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
             <Route path="/Auth" element={<Auth />} />
             <Route path="/" element={<Home />} />
             <Route path="/Jobs" element={<AllJobs />} />
-            <Route path="/Profile" element={<Profile />} />
+            <Route path="/MyProfile" element={<MyProfile />} />
+            <Route path="/Profile/:id" element={<Profile />} />
+            
           </Routes>
         </main>
       </BrowserRouter>

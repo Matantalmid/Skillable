@@ -13,7 +13,7 @@ const getAllStudents = async (req, res) => {
   }
 };
 
-//^ register as Student 
+//^ register as Student
 //? maybe we should do register idk :P
 const register = async (req, res) => {
   const { email, password, firstName, lastName } = req.body;
@@ -30,17 +30,20 @@ const register = async (req, res) => {
     const token = generateToken({
       email: student.email,
       id: student._id,
-      role: "free",
+      firstName,
+      lastName,
+      role: "student",
     });
 
-    await sendWelcomeEmail(student.email, "welcome", { name: student.fullName });
+    // await sendWelcomeEmail(student.email, "welcome", { name: student.fullName });
 
     return res.send({
       student: {
         email,
         id: student._id,
-        role: "free",
-        fullName: `${firstName} ${lastName}`,
+        role: "student",
+        firstName,
+        lastName,
       },
       token,
     });
@@ -61,8 +64,9 @@ const login = async (req, res) => {
         const token = generateToken({
           email: student.email,
           id: student._id,
-          role: "free",
-          fullName: `${student.firstName} ${student.lastName}`,
+          role: "Student",
+          firstName: student.firstName,
+          lastName: student.lastName,
         });
         return res.send(token);
       }
