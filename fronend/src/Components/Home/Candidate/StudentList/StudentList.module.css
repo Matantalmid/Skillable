@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.containerOne {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 1px solid #EFEFEF;
+  background-color: #fff;
+  padding: 16px 16px 16px 32px;
+}
+
+#profileImg {
+  width: 10%;
+}
+
+#name {
+  width: 15%;
+}
+
+#profession {
+  width: 25%;
+}
+
+#position {
+  width: 30%;
+}
+
+#status {
+  width: 10%;
+}
+
+#message {
+  width: 10%;
+}
