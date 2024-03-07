@@ -1,7 +1,16 @@
 import React from "react";
 import styles from "./allJobsFilter.module.css";
-import AddJob from "../../../icons/AddJob";
+import AddJobIcon from "../../../icons/AddJob";
+import { useNavigate } from "react-router-dom";
+import CreateJobPage from "../../../Pages/SingleJob/createSingleJob";
+
 function AllJobsFilter({ filter, setFilter }) {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/CreateJobPage");
+  };
+
   return (
     <section className={styles.allJobsFiter}>
       <div className={styles.jobsFilterBtncontainer}>
@@ -13,7 +22,8 @@ function AllJobsFilter({ filter, setFilter }) {
           }
           onClick={() => {
             setFilter("פתוחות");
-          }}>
+          }}
+        >
           פתוחות (1)
         </button>
         <button
@@ -24,7 +34,8 @@ function AllJobsFilter({ filter, setFilter }) {
           }
           onClick={() => {
             setFilter("טיוטות");
-          }}>
+          }}
+        >
           טיוטות (1)
         </button>
         <button
@@ -35,7 +46,8 @@ function AllJobsFilter({ filter, setFilter }) {
           }
           onClick={() => {
             setFilter("סגורות");
-          }}>
+          }}
+        >
           סגורות (1)
         </button>
         <button
@@ -46,12 +58,13 @@ function AllJobsFilter({ filter, setFilter }) {
           }
           onClick={() => {
             setFilter("הודחו");
-          }}>
+          }}
+        >
           הודחו (1)
         </button>
       </div>
-      <button className={styles.newJobBtn}>
-        יש לי משרה חדשה {<AddJob color={"white"} />}
+      <button className={styles.newJobBtn} onClick={handleNavigate}>
+        יש לי משרה חדשה <AddJobIcon color="white" />
       </button>
     </section>
   );

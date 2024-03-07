@@ -27,8 +27,9 @@ const getJobById = async (req, res) => {
 //^ create
 const createJob = async (req, res) => {
   const { body } = req;
+  console.log(body.formData);
   try {
-    const newJob = new Job(body);
+    const newJob = new Job(body.formData);
     await newJob.save();
     return res.send(newJob);
   } catch (error) {
