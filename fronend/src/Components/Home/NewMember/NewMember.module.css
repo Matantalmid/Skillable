@@ -9,22 +9,18 @@
   gap: 4px;
   background-color: #fff;
 }
-
-.containerOne {
-  width: 127px;
-  height: 88px;
-}
-.containerOne svg {
+.container svg {
+  align-self: self-start;
   margin: 0 0 25px 0;
   height: 20px;
 }
 
-.containerOne h4 {
+.container h4 {
   height: 48px;
   font-weight: 600;
 }
 
-.containerOne h4 span {
+.container h4 span {
   font-size: 30px;
   font-weight: 400;
 }
