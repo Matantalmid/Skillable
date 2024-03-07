@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddJob({ color }) {
+function AddJobIcon({ color }) {
   return (
     <svg
       width="16"
@@ -27,4 +27,4 @@ function AddJob({ color }) {
   );
 }
 
-export default AddJob;
+export default AddJobIcon;
