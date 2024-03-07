@@ -33,7 +33,10 @@ function Navbar() {
               <FontAwesomeIcon icon={faComment} style={{ color: "#000000" }} />
             </div>
             <div className={styles.userImage}>
-              <FontAwesomeIcon icon={faUser} style={{ color: "#B197FC" }} />
+              <Link to={"Profile"}>
+                {" "}
+                <FontAwesomeIcon icon={faUser} style={{ color: "#B197FC" }} />
+              </Link>
             </div>
           </div>
         </div>

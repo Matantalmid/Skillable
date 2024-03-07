@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllJobs from "./Pages/AllJobs/AllJobs";
 import Auth from "./Pages/Auth/Auth";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-          <Route path="/Auth" element={<Auth />} />
+            <Route path="/Auth" element={<Auth />} />
             <Route path="/" element={<Home />} />
-            <Route path="/jobs" element={<AllJobs />} />
+            <Route path="/Jobs" element={<AllJobs />} />
+            <Route path="/Profile" element={<Profile />} />
           </Routes>
         </main>
       </BrowserRouter>
