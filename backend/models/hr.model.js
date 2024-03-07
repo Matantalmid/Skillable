@@ -13,6 +13,7 @@ const hrSchema = new mongoose.Schema({
   },
   company: { type: String },
   jobs: [{ type: mongoose.Types.ObjectId, ref: "Job" }],
+  role: { type: String },
 });
 
 const HR = mongoose.model("Hr", hrSchema);
