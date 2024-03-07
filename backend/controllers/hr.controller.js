@@ -34,7 +34,6 @@ const register = async (req, res) => {
       lastName,
     });
 
-    // await sendWelcomeEmail(hr.email, "welcome", { name: hr.fullName });
 
     return res.send({
       hr: {
@@ -93,6 +92,7 @@ const getHRById = async (req, res) => {
     res.status(400).send("Error");
   }
 };
+
 
 //^ update
 const updateHR = async (req, res) => {

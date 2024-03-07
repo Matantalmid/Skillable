@@ -7,10 +7,11 @@ const jobSchema = new mongoose.Schema({
   skillRequired: { type: String, require: true },
   responsiblies: { type: String, require: true },
   profession: { type: String, require: true },
-  apply: { type: Number },
+  appliedStudents: [{ type:mongoose.Types.ObjectId, ref:"Students" }],
   status: { type: String },
   date: { type: String }, //! temporary it will be in hebrew
-  createdAt: {type:Date , default: Date.now()},
+  createdAt: { type: Date, default: Date.now() },
+  postedBy: { type: mongoose.Types.ObjectId, ref: "HR" },
 });
 
 const Job = mongoose.model("Job", jobSchema);
