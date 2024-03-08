@@ -18,8 +18,9 @@ export default function CreateJobPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    console.log(user);
     try {
-      const res = await axios.post(`${baseUrl}/jobs`, {...formData,postedBy:user.id});
+      const res = await axios.post(`${baseUrl}/jobs`, {...formData,postedBy:user._id});
       const data = res.data;
     } catch (error) {
       console.log(error);

@@ -1,53 +1,106 @@
-import React from 'react'
+import React from "react";
+import styles from "./SignUp.module.css";
 
-export default function SignUp({ sumbitHandler, changeHandler, toggleMode,EnteredAsHandler, error}) {
+export default function SignUp({
+  sumbitHandler,
+  changeHandler,
+  toggleMode,
+  EnteredAsHandler,
+  error,
+}) {
   return (
-    <div>
-      <div >
-        <div>
-        </div>
-        <h1>הרשמה</h1>
-        <form onSubmit={sumbitHandler}>
-          <div>
-            <label htmlFor="userNameInput">שם פרטי:</label>
-            <input onChange={changeHandler} type="text" name="firstName" id="userNameInput" required />
+    <div className={styles.container}>
+      <div className={styles.signUpWrapper}>
+        <h1 className={styles.heading}>הרשמה</h1>
+        <form onSubmit={sumbitHandler} className={styles.form}>
+          <div className={styles.formGroup}>
+            <label htmlFor="userNameInput" className={styles.label}>
+              שם פרטי:
+            </label>
+            <input
+              onChange={changeHandler}
+              type="text"
+              name="firstName"
+              id="userNameInput"
+              required
+              className={styles.input}
+            />
           </div>
-          <div>
-            <label htmlFor="userNameInput">שם משפחה:</label>
-            <input onChange={changeHandler} type="text" name="lastName" id="userNameInput" required />
+          <div className={styles.formGroup}>
+            <label htmlFor="userLastNameInput" className={styles.label}>
+              שם משפחה:
+            </label>
+            <input
+              onChange={changeHandler}
+              type="text"
+              name="lastName"
+              id="userLastNameInput"
+              required
+              className={styles.input}
+            />
           </div>
-          <div>
-      <label htmlFor="userEnteredAsInput">נכנס כ: {error === "user access is incorrect" && <span>גישה שגויה</span>}</label>
-      <select
-        onChange={EnteredAsHandler}
-        type="text"
-        name="EnteredAs"
-        id="userEnteredAsInput"
-        required
-        defaultValue=""
-      >
-        <option value="" disabled></option>
-        {/* <option value="students" >סטודנט/ית</option> */} //! כרגע אי אפשר להירשם בתור סטונדט
-        <option value="staff">סגל</option>
-        <option value="hrs">מגייס/ת</option>
-      </select>
-    </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="userEnteredAsInput" className={styles.label}>
+              נכנס כ:{" "}
+              {error === "user access is incorrect" && (
+                <span className={styles.errorSpan}>גישה שגויה</span>
+              )}
+            </label>
+            <select
+              onChange={EnteredAsHandler}
+              type="text"
+              name="EnteredAs"
+              id="userEnteredAsInput"
+              required
+              defaultValue=""
+              className={styles.select}
+            >
+              <option value="" disabled></option>
+              {/* <option value="students" >סטודנט/ית</option> */} //! כרגע אי
+              אפשר להירשם בתור סטונדט
+              <option value="staff">סגל</option>
+              <option value="hrs">מגייס/ת</option>
+            </select>
+          </div>
 
-          <div>
-            <label htmlFor="userEmailInput">אימייל:</label>
-            <input onChange={changeHandler} type="email" name="email" id="userEmailInput" required />
+          <div className={styles.formGroup}>
+            <label htmlFor="userEmailInput" className={styles.label}>
+              אימייל:
+            </label>
+            <input
+              onChange={changeHandler}
+              type="email"
+              name="email"
+              id="userEmailInput"
+              required
+              placeholder="הזן כתובת אימייל"
+              className={styles.input}
+            />
           </div>
 
-          <div>
-            <label htmlFor="userPasswordInput">סיסמה:</label>
-            <input onChange={changeHandler} type="password" name="password" id="userPasswordInput" required />
+          <div className={styles.formGroup}>
+            <label htmlFor="userPasswordInput" className={styles.label}>
+              סיסמה:
+            </label>
+            <input
+              onChange={changeHandler}
+              type="password"
+              name="password"
+              id="userPasswordInput"
+              required
+              placeholder="******"
+              className={styles.input}
+            />
           </div>
 
-          <button type="submit">הרשמה</button>
+          <button type="submit" className={styles.submitButton}>
+            הרשמה
+          </button>
         </form>
-        <p onClick={toggleMode}>כבר יש לך חשבון? לחץ כאן</p>
+        <p onClick={toggleMode} className={styles.link}>
+          כבר יש לך חשבון? לחץ כאן
+        </p>
       </div>
     </div>
-  )
+  );
 }
-
