@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-// import { UserContext } from "../../context/User";
 import { useNavigate } from "react-router-dom";
 import styles from "./LogIn.module.css";
-
+import OpenEyeIcon from "../../icons/OpenEyeIcon";
+import EyeIconWithLine from "../../icons/EyeIconWithLine";
 export default function Login({
   sumbitHandler,
   changeHandler,
@@ -10,6 +10,7 @@ export default function Login({
   EnteredAsHandler,
   error,
 }) {
+  const [showPassword, setShowPassword] = useState(false);
   const nav = useNavigate();
   return (
     <div className={styles.container}>
@@ -30,8 +31,7 @@ export default function Login({
               id="userEnteredAsInput"
               required
               defaultValue=""
-              className={styles.select}
-            >
+              className={styles.select}>
               <option value="" disabled></option>
               <option value="students">סטודנט/ית</option>
               <option value="staff">סגל</option>
@@ -60,15 +60,23 @@ export default function Login({
             <label htmlFor="userPasswordInput" className={styles.label}>
               סיסמה:
             </label>
-            <input
-              onChange={changeHandler}
-              type="password"
-              name="password"
-              id="userPasswordInput"
-              required
-              placeholder="********"
-              className={styles.input}
-            />
+            <div className={styles.passwordGroup}>
+              <input
+                onChange={changeHandler}
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="userPasswordInput"
+                required
+                placeholder="********"
+                className={styles.input}
+              />
+              <span
+                onClick={() => {
+                  setShowPassword(!showPassword);
+                }}>
+                {showPassword ? <EyeIconWithLine /> : <OpenEyeIcon />}
+              </span>
+            </div>
           </div>
           <button type="submit" className={styles.submitButton}>
             התחברות
@@ -79,8 +87,7 @@ export default function Login({
             onClick={() => {
               nav("/auth/forgotpassword");
             }}
-            className={styles.link}
-          >
+            className={styles.link}>
             שכחת סיסמא? לחץ כאן
           </p>
           <p onClick={toggleMode} className={styles.link}>

@@ -1,73 +1,81 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    border-radius: 70px;
-  }
-  
-  .loginWrapper {
-    width: 400px;
-  }
-  
-  .heading {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .formGroup {
-    margin-bottom: 20px;
-  }
-  
-  .label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .errorSpan {
-    color: red;
-    margin-left: 5px;
-  }
-  
-  .select,
-  .input,
-  .submitButton {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submitButton {
-    cursor: pointer;
-    width: 173px;
-    height: 44px;
-    border: none;
-    border-radius: 25px;
-    background-color: #6940db;
-    color: #ffffff;
-    font-size: var(--btnSize);
-    font-weight: var(--btnWidth);
-    line-height: var(--btnLineHeight);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 20px auto;
-  }
-  
-  .linkWrapper {
-    text-align: center;
-  }
-  
-  .link {
-    cursor: pointer;
-    margin-bottom: 10px;
-    color: #6940db;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 70px;
+}
+
+.loginWrapper {
+  width: 400px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.errorSpan {
+  color: red;
+  margin-left: 5px;
+}
+
+.select,
+.input,
+.submitButton {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.passwordGroup {
+  width: 100%;
+  position: relative;
+}
+.passwordGroup svg {
+  position: absolute;
+  left: 10px;
+  bottom: 25%;
+  cursor: pointer;
+}
+.submitButton {
+  cursor: pointer;
+  width: 173px;
+  height: 44px;
+  border: none;
+  border-radius: 25px;
+  background-color: #6940db;
+  color: #ffffff;
+  font-size: var(--btnSize);
+  font-weight: var(--btnWidth);
+  line-height: var(--btnLineHeight);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px auto;
+}
+
+.linkWrapper {
+  text-align: center;
+}
+
+.link {
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #6940db;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
