@@ -1,5 +1,8 @@
 .container {
+  height: 92px;
   display: flex;
+  align-items: center;
+  gap: 30px;
   padding: 16px 16px 16px 32px;
   background-color: #fff;
   border-bottom: 1px solid #efefef;
@@ -10,9 +13,13 @@
   font-size: 16px;
   line-height: 24px;
 }
-
-#profileImg {
+#profileImgContainer {
   width: 10%;
+}
+#profileImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
 }
 
 #name {
@@ -21,14 +28,24 @@
 
 #profession {
   width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #position {
   width: 30%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #status {
   width: 10%;
+  padding: 4px 14px 4px 12px;
+  background: #f0ecfb;
+  border-radius: 25px;
+  text-align: center;
 }
 
 #message {
