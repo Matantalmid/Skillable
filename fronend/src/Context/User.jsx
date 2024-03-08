@@ -17,7 +17,7 @@ export default function UserProvider({ children }) {
           { token }
         );
         const userData = res.data;
-        console.log(userData);
+        setUser(userData);
         
         
       } else {
