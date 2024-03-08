@@ -1,11 +1,46 @@
 .jobForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #f0ecfb;
+    margin: 20px;
+    width: 100%;
   }
   
   .formLabel {
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 5px;
   }
   
-  .formInput {
+  .formInput,
+  .newJobBtn,
+  .formInput[type='date'],
+  .formInput[type='number'],
+  .formInput[type='text'] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #495057;
+    background-color: #ffffff;
+    Resize:none
+
   }
+  
+  .formInput:focus,
+  .newJobBtn:focus,
+  .formInput[type='date']:focus,
+  .formInput[type='number']:focus,
+  .formInput[type='text']:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
 
 .newJobBtn {
     cursor: pointer;
@@ -23,4 +58,6 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin: 20px auto;
 }
+

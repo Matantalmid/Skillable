@@ -25,6 +25,25 @@ const getJobById = async (req, res) => {
   }
 };
 
+//^ get jobs uploaded by a specific HR user
+const getJobsByHR = async (req, res) => {
+  const { HRId } = req.params;
+
+  try {
+    // Find jobs by HRId
+    const jobs = await Job.find({ HRId });
+
+    if (!jobs) {
+      return res.status(404).send({ message: 'No jobs found for the specified HR user.' });
+    }
+
+    res.status(200).send(jobs);
+  } catch (error) {
+    res.status(500).send({ message: 'Server Error' });
+  }
+};
+
+
 
 //^ create
 const createJob = async (req, res) => {
@@ -73,6 +92,7 @@ const deleteJob = async (req, res) => {
 module.exports = {
   getAllJobs,
   getJobById,
+  getJobsByHR,
   createJob,
   updateJob,
   deleteJob,

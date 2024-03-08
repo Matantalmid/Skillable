@@ -3,6 +3,7 @@ const {
   createJob,
   getAllJobs,
   getJobById,
+  getJobsByHR,
   updateJob,
   deleteJob,
 } = require("../controllers/job.controller");
@@ -16,6 +17,10 @@ router.get("/", getAllJobs);
 
 //^ get a job by id
 router.get("/:id", getJobById);
+
+//^ get jobs uploaded by a specific HR user
+router.get("/:HRId", getJobsByHR);
+
 
 //^ update job by id
 router.patch("/:id", updateJob);
