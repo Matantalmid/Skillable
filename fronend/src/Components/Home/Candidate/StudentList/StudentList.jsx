@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StudentListCard from "../StudentListCard/StudentListCard";
 import styles from "./StudentList.module.css";
+import { baseUrl } from "../../../../utils/backEndUtils";
+import axios from "axios";
+import { UserContext } from "../../../../Context/User";
+import { useContext } from "react";
 function StudentLIst() {
+  const { user } = useContext(UserContext);
+  const [job, setJob] = useState();
+
+  const getJobsByHR = async () => {
+    console.log(user);
+    try {
+      const res = await axios.post(`${baseUrl}/jobs/getHrJobs`, {
+        HRId: user._id,
+      });
+      const data = res.data;
+      console.log(data);
+      setJob(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getJobsByHR();
+  }, [user]);
+
   return (
     <>
       <div className={styles.container}>
@@ -13,9 +38,13 @@ function StudentLIst() {
           <p id={styles.status}>סטטוס</p>
           <p id={styles.message}>הודעה</p>
         </div>
-        <div className={styles.containerTwo}>
-          <StudentListCard />
-        </div>
+      {job?.map((job) => {
+        return (
+          <div className={styles.containerTwo}>
+            <StudentListCard job={job} />
+          </div>
+        );
+      })}
       </div>
     </>
   );
