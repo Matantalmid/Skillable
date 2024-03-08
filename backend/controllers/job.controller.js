@@ -31,7 +31,7 @@ const getJobsByHR = async (req, res) => {
 
   try {
     // Find jobs by HRId
-    const jobs = await Job.find({ HRId });
+    const jobs = await Job.find({ postedBy: HRId });
 
     if (!jobs) {
       return res.status(404).send({ message: 'No jobs found for the specified HR user.' });

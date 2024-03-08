@@ -19,7 +19,7 @@ router.get("/", getAllJobs);
 router.get("/:id", getJobById);
 
 //^ get jobs uploaded by a specific HR user
-router.get("/:HRId", getJobsByHR);
+router.get("/:ByHR/:HRId", getJobsByHR);
 
 
 //^ update job by id
