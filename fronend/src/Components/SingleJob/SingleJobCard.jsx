@@ -6,7 +6,7 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
     <div>
       <form onSubmit={handleSubmit} className={styles.jobForm}>
         <label htmlFor="name" className={styles.formLabel}>
-          שם משרה:
+          <strong> שם משרה:</strong>
         </label>
         <input
           type="text"
@@ -17,7 +17,7 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
         />
 
         <label htmlFor="coverImg" className={styles.formLabel}>
-          תמונת רקע:
+          <strong>תמונת רקע:</strong>
         </label>
         <input
           type="text"
@@ -28,40 +28,42 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
         />
 
         <label htmlFor="description" className={styles.formLabel}>
-          תיאור:
+          <strong>תיאור:</strong>
         </label>
-        <input
-          type="text"
+        <textarea
           id="description"
           name="description"
           onChange={handleChange}
           className={styles.formInput}
-        />
+          rows="3"
+        ></textarea>
 
         <label htmlFor="skillRequired" className={styles.formLabel}>
-          מיומנויות נדרשות:
+          <strong>מיומנויות נדרשות:</strong>
         </label>
-        <input
+        <textarea
           type="text"
           id="skillRequired"
           name="skillRequired"
           onChange={handleChange}
           className={styles.formInput}
+          rows="5"
         />
 
         <label htmlFor="responsibilities" className={styles.formLabel}>
-          אחריות:
+          <strong>אחריות:</strong>
         </label>
-        <input
+        <textarea
           type="text"
           id="responsibilities"
           name="responsibilities"
           onChange={handleChange}
           className={styles.formInput}
+          rows="5"
         />
 
         <label htmlFor="profession" className={styles.formLabel}>
-          מקצוע:
+          <strong>מקצוע:</strong>
         </label>
         <input
           type="text"
@@ -71,19 +73,21 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
           className={styles.formInput}
         />
 
-        <label htmlFor="apply" className={styles.formLabel}>
-          הגישו:
-        </label>
-        <input
-          type="number"
-          id="apply"
-          name="apply"
-          onChange={handleChange}
-          className={styles.formInput}
-        />
+<label htmlFor="apply" className={styles.formLabel}>
+  <strong>הגישו:</strong>
+</label>
+<input
+  type="number"
+  id="apply"
+  name="apply"
+  onChange={handleChange}
+  className={styles.formInput}
+  placeholder="אנא הזן מספר (לדוגמה: 5)"
+/>
+
 
         <label htmlFor="status" className={styles.formLabel}>
-          סטטוס:
+          <strong>סטטוס:</strong>
         </label>
         <select
           id="status"
@@ -91,7 +95,7 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
           onChange={handleChange}
           className={styles.formInput}
         >
-          <option value="">Select status</option>
+          <option value="">בחר סטטוס</option>
           <option value="Open">פתוחות</option>
           <option value="Closed">טיוטות</option>
           <option value="Closed">סגורות</option>
@@ -99,7 +103,7 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
         </select>
 
         <label htmlFor="date" className={styles.formLabel}>
-          תאריך:
+          <strong>תאריך:</strong>
         </label>
         <input
           type="date"
@@ -116,4 +120,3 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
     </div>
   );
 }
-

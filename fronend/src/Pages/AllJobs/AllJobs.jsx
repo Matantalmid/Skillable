@@ -4,14 +4,18 @@ import AllJobsFilter from "../../Components/AllJobs/allJobsFilter/AllJobsFilter"
 import AllJobsList from "../../Components/AllJobs/allJobsList/AllJobsList";
 import axios from 'axios';
 import { baseUrl } from "../../utils/backEndUtils";
+import { UserContext } from "../../Context/User";
+import { useContext } from "react"
 
 function AllJobs() {
   const [filter, setFilter] = useState("פתוחות");
   const [jobs, setJobs] = useState([ "Test","d"]);
+  const { user } = useContext(UserContext);
+
 
   const getJobsFromDb=async ()=>{
     try {
-      const res= await axios.get(`${baseUrl}/jobs`)
+      const res= await axios.get(`${baseUrl}/jobs/ByHR/${user._id}`)
       const data=res.data
       console.log(data);
       setJobs(data)
