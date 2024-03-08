@@ -1,3 +1,9 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/** first box start*/
 .firstContainer {
   display: flex;
   flex-direction: row;
@@ -20,15 +26,18 @@
   gap: 24px;
   align-items: center;
 }
+.imgContainer {
+  position: relative;
+}
 .imgContainer img {
   width: 112px;
   height: 112px;
   border: 2px;
   border-radius: 50%;
+
   /* background-image: url(); */
   /* background-size: cover;
-  background-position: center;
-  position: relative; */
+  background-position: center;*/
 }
 
 .imgContainer svg {
@@ -97,3 +106,92 @@
   justify-content: center;
   cursor: pointer;
 }
+/** first box end*/
+/** about And Contact box start*/
+.aboutAndContactContainer {
+  height: 207px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contactContainer,
+.aboutContainer {
+  width: 49%;
+  height: 100%;
+  padding: 24px 32px 32px 32px;
+  border-radius: 24px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aboutHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+}
+.aboutHeader div {
+  align-self: flex-start;
+  font-size: 24px;
+  font-weight: 700;
+}
+.aboutDesc {
+  max-height: 48px; /* Adjust to accommodate two lines of text */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* Adjust to match your line height */
+  text-align: right;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.langBox {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.langBox div {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.langName {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right;
+}
+.langRate {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+}
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contactInfo div {
+  display: flex;
+  gap: 16px;
+}
+.contactInfo div div {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  width: 33%;
+}
+.contactInfo div div a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  color: var(--blackColor);
+}
+/** about And Contact box end*/

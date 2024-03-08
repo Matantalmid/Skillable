@@ -4,11 +4,16 @@ import HeartIcon from "../../icons/HeartIcon";
 import HollowClock from "../../icons/HollowClock";
 import PositionIcon from "../../icons/PositionIcon";
 import DownloadArrow from "../../icons/DownloadArrow";
+import PhoneCall from "../../icons/PhoneCall";
+import Envelope from "../../icons/Envelope";
+import Globe from "../../icons/Globe";
+import LinkedIn from "../../icons/LinkedIn";
+import GitHub from "../../icons/GitHub";
 import Sparks from "../../icons/Sparks";
 function StudentProfile({ user }) {
   console.log(user);
   return (
-    <div>
+    <div className={styles.profileContainer}>
       <div className={styles.firstContainer}>
         <div className={styles.rightSide}>
           <div className={styles.imgContainer}>
@@ -61,7 +66,72 @@ function StudentProfile({ user }) {
           </div>
         </div>
       </div>
-      <div className={styles.aboutAndContactContainer}></div>
+      <div className={styles.aboutAndContactContainer}>
+        <div className={styles.aboutContainer}>
+          <div className={styles.aboutHeader}>
+            <h2>אודות</h2>
+            <div>...</div>
+          </div>
+          <div className={styles.aboutDesc}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            ratione facere doloribus, nisi omnis, asperiores cupiditate
+            quibusdam illum id voluptatem incidunt praesentium sed cumque nemo
+            velit rerum? Fugiat, possimus quas! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Veritatis iste voluptas magnam enim
+            dicta illo temporibus sequi magni architecto suscipit, laborum
+            veniam itaque dolorum maiores, optio, tempore ipsum numquam
+            blanditiis.
+          </div>
+          <div className={styles.langBox}>
+            <div>
+              <span className={styles.langName}>עברית</span>
+              <span className={styles.langRate}>מעולה</span>
+            </div>
+            <div>
+              <span className={styles.langName}>אנגלית</span>
+              <span className={styles.langRate}>מצויין</span>
+            </div>
+          </div>
+        </div>
+        <div className={styles.contactContainer}>
+          <div className={styles.contactHeader}>
+            <h2>יצירת קשר</h2>
+          </div>
+          <div className={styles.contactInfo}>
+            <div className={styles.contactInfo1}>
+              <div className={styles.phone}>
+                <PhoneCall />
+                <span>050-4521-665</span>
+              </div>
+              <div className={styles.email}>
+                <Envelope />
+                <span>050-4521-665</span>
+              </div>
+              <div className={styles.site}>
+              <a href="" target="_blank">
+                  <Globe />
+                  <span>050-4521-665</span>
+                </a>
+              </div>
+            </div>
+            <div className={styles.contactInfo2}>
+              <div className={styles.linkedIn}>
+              <a href="" target="_blank">
+                  <LinkedIn />
+                  <span>050-4521-665</span>
+                </a>
+              </div>
+              <div className={styles.github}>
+                <a href="" target="_blank">
+                  <GitHub />
+                  <span>050-4521-665</span>
+                </a>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.recommendations}></div>
       <div className={styles.skillsHeaderBtn}></div>
       <div className={styles.skillsContainer}>
