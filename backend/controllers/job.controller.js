@@ -48,7 +48,7 @@ const getJobsByHR = async (req, res) => {
 //^ create
 const createJob = async (req, res) => {
   const { body } = req;
-  console.log(body);
+ 
   const { postedBy } = body;
   try {
     const newJob = new Job(body);

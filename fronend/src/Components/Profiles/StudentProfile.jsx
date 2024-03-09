@@ -10,6 +10,7 @@ import Globe from "../../icons/Globe";
 import LinkedIn from "../../icons/LinkedIn";
 import GitHub from "../../icons/GitHub";
 import Sparks from "../../icons/Sparks";
+import PagnationDot from "../../icons/PagnationDot";
 function StudentProfile({ user }) {
   console.log(user);
   return (
@@ -108,7 +109,7 @@ function StudentProfile({ user }) {
                 <span>050-4521-665</span>
               </div>
               <div className={styles.site}>
-              <a href="" target="_blank">
+                <a href="" target="_blank">
                   <Globe />
                   <span>050-4521-665</span>
                 </a>
@@ -116,7 +117,7 @@ function StudentProfile({ user }) {
             </div>
             <div className={styles.contactInfo2}>
               <div className={styles.linkedIn}>
-              <a href="" target="_blank">
+                <a href="" target="_blank">
                   <LinkedIn />
                   <span>050-4521-665</span>
                 </a>
@@ -132,7 +133,51 @@ function StudentProfile({ user }) {
           </div>
         </div>
       </div>
-      <div className={styles.recommendations}></div>
+      <div className={styles.recommendationsContainer}>
+        <div className={styles.recommendationsHeader}>
+          <h2>ממליצים</h2>
+        </div>
+        <div className={styles.recommendationsBox}>
+          <div className={styles.twoRecommendtionsBox}>
+            <div className={styles.recomendtionBox}>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/8124/21a4/2e2cc5788a0f64b53a1f28566818ffbf?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q79Xa6WqI4aFPlN22wPx0tsqU~Ahc1AV57iJ2Xk3JI5Phwo9oURjwjljsJ1H8dA50f5PPOVp3Xgn7Wylp6h~St2mszo4jEPHkoaEbCZkSIV8e1I39iSMC2I90Avq8cL9r3QL0dswSqTXyLH3pE4US2mBPacOGYzsFB0wwnxBixmsEtS6r0L-YItjK5NA-wM6bko0F36Bcx58ZeSotYWo0ug2FwoqzeoBI6RIiXguJcLA8HYFVI4TEtOAe~a6FHDQpy2nwG9diAdMXGUoaym~Gp2lH7pTsYqv0GFcTDPPd7hidyWFgx9LyqfMcxUcOnVzdf7ZKqJRRKKKWpBURAFAdA__"
+                alt=""
+              />
+              <div className={styles.recomTextContainer}>
+                <div className={styles.recomDesc}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis, et sapiente quisquam quod quis, laboriosam itaque
+                  deserunt officiis eveniet non minus tempore labore laudantium
+                  qui magni voluptatibus numquam error quae.
+                </div>
+                <div className={styles.recomSender}>עמית שושן • IITC</div>
+              </div>
+            </div>
+            <div className={styles.recomendtionBox}>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/8124/21a4/2e2cc5788a0f64b53a1f28566818ffbf?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q79Xa6WqI4aFPlN22wPx0tsqU~Ahc1AV57iJ2Xk3JI5Phwo9oURjwjljsJ1H8dA50f5PPOVp3Xgn7Wylp6h~St2mszo4jEPHkoaEbCZkSIV8e1I39iSMC2I90Avq8cL9r3QL0dswSqTXyLH3pE4US2mBPacOGYzsFB0wwnxBixmsEtS6r0L-YItjK5NA-wM6bko0F36Bcx58ZeSotYWo0ug2FwoqzeoBI6RIiXguJcLA8HYFVI4TEtOAe~a6FHDQpy2nwG9diAdMXGUoaym~Gp2lH7pTsYqv0GFcTDPPd7hidyWFgx9LyqfMcxUcOnVzdf7ZKqJRRKKKWpBURAFAdA__"
+                alt=""
+              />
+              <div className={styles.recomTextContainer}>
+                <div className={styles.recomDesc}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis, et sapiente quisquam quod quis, laboriosam itaque
+                  deserunt officiis eveniet non minus tempore labore laudantium
+                  qui magni voluptatibus numquam error quae.
+                </div>
+                <div className={styles.recomSender}>עמית שושן • IITC</div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.recommendationsPagination}>
+            <PagnationDot color={"#1C1F3C"} />
+            <PagnationDot />
+            <PagnationDot />
+            <PagnationDot />
+          </div>
+        </div>
+      </div>
       <div className={styles.skillsHeaderBtn}></div>
       <div className={styles.skillsContainer}>
         <div className={styles.skillsHeader}></div>
