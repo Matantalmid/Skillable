@@ -10,7 +10,6 @@ const jobSchema = new mongoose.Schema({
 
   appliedStudents: [{ type: mongoose.Types.ObjectId, ref: "Student" }],
 
-
   status: { type: String },
   date: { type: String }, //! temporary it will be in hebrew
   createdAt: { type: Date, default: Date.now() },

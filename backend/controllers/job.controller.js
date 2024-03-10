@@ -25,36 +25,36 @@ const getJobById = async (req, res) => {
   }
 };
 
-//^ get jobs uploaded by a specific HR user
+// get jobs uploaded by a specific HR user
 const getJobsByHR = async (req, res) => {
-  const { HRId } = req.params;
+  const { body } = req;
 
   try {
     // Find jobs by HRId
-    const jobs = await Job.find({ postedBy: HRId });
+    const jobs = await Job.find({ postedBy: body.HRId }).populate('appliedStudents');
 
     if (!jobs) {
-      return res.status(404).send({ message: 'No jobs found for the specified HR user.' });
+      return res
+        .status(404)
+        .send({ message: "No jobs found for the specified HR user." });
     }
 
     res.status(200).send(jobs);
   } catch (error) {
-    res.status(500).send({ message: 'Server Error' });
+    res.status(500).send({ message: "Server Error", error });
   }
 };
-
-
 
 //^ create
 const createJob = async (req, res) => {
   const { body } = req;
-  console.log(body);
-  const {postedBy } = body
+ 
+  const { postedBy } = body;
   try {
     const newJob = new Job(body);
-const hr=await HR.findById(postedBy)
-hr.jobs.push(newJob._id);
-await hr.save()
+    const hr = await HR.findById(postedBy);
+    hr.jobs.push(newJob._id);
+    await hr.save();
     await newJob.save();
     return res.send(newJob);
   } catch (error) {
@@ -62,7 +62,6 @@ await hr.save()
     res.status(400).send("Error");
   }
 };
-
 
 //^ update
 const updateJob = async (req, res) => {

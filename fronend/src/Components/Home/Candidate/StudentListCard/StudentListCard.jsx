@@ -1,17 +1,24 @@
 import React from "react";
 import styles from "./StudentListCard.module.css";
 
-function StudentListCard() {
+function StudentListCard(props) {
+  const { job } = props;
   return (
     <>
-      <div className={styles.container}>
-        <img id={styles.profileImg} src="" alt="" />
-        <p id={styles.name}>טל כהן</p>
-        <p id={styles.profession}>Software developer</p>
-        <p id={styles.position}>Lead It Assent Management</p>
-        <p id={styles.status}>בתהליך</p>
-        <p id={styles.message}>הודעה</p>
-      </div>
+      {job.appliedStudents.map((student) => {
+        return (
+          <div className={styles.container}>
+            <div id={styles.profileImgContainer}>
+              <img id={styles.profileImg} src={student.coverImg} alt="" />
+            </div>
+            <h4 id={styles.name}>{student.firstName}</h4>
+            <p id={styles.profession}>{student.profession}</p>
+            <p id={styles.position}>{job.name}</p>
+            <p id={styles.status}>{student.recruitmentStatus}</p>
+            <p id={styles.message}>הודעה</p>
+          </div>
+        );
+      })}
     </>
   );
 }
