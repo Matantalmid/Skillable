@@ -60,7 +60,7 @@ const register = async (req, res) => {
 //^ login  as HR
 const login = async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  
   try {
     const hr = await HR.findOne({ email });
     if (hr) {
