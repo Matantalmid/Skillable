@@ -11,6 +11,7 @@ import LinkedIn from "../../icons/LinkedIn";
 import GitHub from "../../icons/GitHub";
 import Sparks from "../../icons/Sparks";
 import PagnationDot from "../../icons/PagnationDot";
+import Gem from "../../icons/Gem";
 function StudentProfile({ user }) {
   console.log(user);
   return (
@@ -178,7 +179,9 @@ function StudentProfile({ user }) {
           </div>
         </div>
       </div>
-      <div className={styles.skillsHeaderBtn}></div>
+      <div className={styles.skillsHeaderBtn}>
+        גלו את הכישורים שלי <Gem />
+      </div>
       <div className={styles.skillsContainer}>
         <div className={styles.skillsHeader}></div>
         <div className={styles.techSkillsContainer}>

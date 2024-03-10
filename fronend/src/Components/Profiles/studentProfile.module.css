@@ -259,3 +259,20 @@
   gap: 16px;
 }
 /** recommendations box end*/
+/**skills Container start*/
+.skillsHeaderBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 428px;
+  gap: 10px;
+  height: 60px;
+  background: #6940db;
+  border-radius: 50px;
+  color: #fff;
+  font-size: var(--btnSize);
+  font-weight: var(--btnWeight);
+  line-height: var(--btnLineHeight);
+}
+/**skills Container end*/
