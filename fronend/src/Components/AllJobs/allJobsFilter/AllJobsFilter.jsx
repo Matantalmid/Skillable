@@ -52,15 +52,15 @@ function AllJobsFilter({ filter, setFilter }) {
         </button>
         <button
           className={
-            filter === "הודחו"
+            filter === "נדחו"
               ? `${styles.chosenFilter} ${styles.jobFilterBtn}`
               : styles.jobFilterBtn
           }
           onClick={() => {
-            setFilter("הודחו");
+            setFilter("נדחו");
           }}
         >
-          הודחו (1)
+          נדחו (1)
         </button>
       </div>
       <button className={styles.newJobBtn} onClick={handleNavigate}>

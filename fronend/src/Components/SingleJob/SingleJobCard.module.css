@@ -61,3 +61,29 @@
     margin: 20px auto;
 }
 
+.fileInput {
+  display: none;
+  height: 30px;
+  margin-top: 30px;}
+
+.fileLabel {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #ccc; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+}
+
+/* .fileButton {
+  background-color: #007bff; 
+  color: white; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+.fileButton:hover {
+  background-color: #0056b3; 
+} */
