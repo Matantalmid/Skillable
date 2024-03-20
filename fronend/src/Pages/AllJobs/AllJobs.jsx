@@ -9,23 +9,22 @@ import { useContext } from "react";
 
 function AllJobs() {
   const [filter, setFilter] = useState("פתוחות");
-  const [jobs, setJobs] = useState(["Test", "d"]);
+  const [jobs, setJobs] = useState([2]);
   const { user } = useContext(UserContext);
-
   const getJobsFromDb = async () => {
     try {
-      const res = await axios.get(`${baseUrl}/jobs/ByHR/${user._id}`);
+      const res = await axios.get(`${baseUrl}/jobs/byHR/${user._id}`);
       const data = res.data;
-      console.log(data);
       setJobs(data);
     } catch (error) {
       console.log(error);
+      console.log("wrong");
     }
   };
 
   useEffect(() => {
-    getJobsFromDb();
-  }, []);
+    if (user) getJobsFromDb();
+  }, [user]);
   return (
     <div>
       <h2>כל המשרות</h2>

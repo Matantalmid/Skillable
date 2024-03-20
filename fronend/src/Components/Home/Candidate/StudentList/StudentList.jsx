@@ -12,9 +12,9 @@ function StudentLIst() {
   const getJobsByHR = async () => {
     console.log(user);
     try {
-      const res = await axios.post(`${baseUrl}/jobs/getHrJobs`, {
-        HRId: user._id,
-      });
+      const res = await axios.get(
+        `${baseUrl}/jobs/hrJobsCandidates/${user._id}`
+      );
       const data = res.data;
       console.log(data);
       setJob(data);
@@ -38,13 +38,13 @@ function StudentLIst() {
           <p id={styles.status}>סטטוס</p>
           <p id={styles.message}>הודעה</p>
         </div>
-      {job?.map((job) => {
-        return (
-          <div className={styles.containerTwo}>
-            <StudentListCard job={job} />
-          </div>
-        );
-      })}
+        {job?.map((job) => {
+          return (
+            <div className={styles.containerTwo}>
+              <StudentListCard job={job} />
+            </div>
+          );
+        })}
       </div>
     </>
   );
