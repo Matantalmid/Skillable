@@ -28,7 +28,7 @@ export default function UserProvider({ children }) {
     }
   };
 
-  useEffect(async () => {
+  useEffect( () => {
     getUserFromDb();
   }, []);
 

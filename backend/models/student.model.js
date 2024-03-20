@@ -50,7 +50,7 @@ const studentSchema = new mongoose.Schema({
     msg: { type: String },
     user: { type: mongoose.Types.ObjectId, ref: "Students" },
   },
-  college: { type: mongoose.Types.ObjectId, ref: "Students" },
+  college: { type: mongoose.Types.ObjectId, ref: "Collage" },
   role: { type: String },
 });
 

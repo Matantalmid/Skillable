@@ -7,7 +7,7 @@ const staffSchema = new mongoose.Schema({
   email: { type: String, require: true },
   role: { type: String },
   coverImg: { type: String },
-  collage: [{ type: mongoose.Types.ObjectId, ref: "Collage" }],
+  college: [{ type: mongoose.Types.ObjectId, ref: "Collage" }],
 });
 
 const Staff = mongoose.model("Staff", staffSchema);
