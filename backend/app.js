@@ -17,7 +17,6 @@ app.use("/api/v1/hrs", hrRouter);
 app.use("/api/v1/staff", staffRouter);
 app.use("/api/v1/collages", collageRouter);
 app.use("/api/v1/jobs", jobRouter);
-app.use("/api/v1/tokenManipulation",tokenManipulationRouter)
-
+app.use("/api/v1/tokenManipulation", tokenManipulationRouter);
 
 module.exports = { app };
