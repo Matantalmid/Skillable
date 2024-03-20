@@ -6,6 +6,7 @@ const {
   getJobsByHR,
   updateJob,
   deleteJob,
+  getHrJobsCandidates,
 } = require("../controllers/job.controller");
 const router = Router();
 
@@ -19,8 +20,10 @@ router.get("/", getAllJobs);
 router.get("/:id", getJobById);
 
 //^ get jobs uploaded by a specific HR user
-router.post("/getHrJobs", getJobsByHR);
+router.get("/byHR/:HRId", getJobsByHR);
 
+//^ get Hr jobs getHrJobsCandidates
+router.get("/hrJobsCandidates/:HRId", getHrJobsCandidates);
 
 //^ update job by id
 router.patch("/:id", updateJob);
