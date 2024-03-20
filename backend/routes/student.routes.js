@@ -6,6 +6,7 @@ const {
   getStudentById,
   updateStudent,
   deleteStudent,
+  getStudentsByCollege
 } = require("../controllers/student.controller");
 const router = Router();
 
@@ -25,6 +26,9 @@ router.get("/", getAllStudents);
 
 //^ update student by id
 router.patch("/:id", updateStudent);
+
+// get Students By College
+router.get("/:collegeId", getStudentsByCollege)
 
 //^ delete student by id
 router.delete("/:id", deleteStudent);
