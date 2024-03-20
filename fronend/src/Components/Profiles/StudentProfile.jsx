@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./studentProfile.module.css";
 import HeartIcon from "../../icons/HeartIcon";
 import HollowClock from "../../icons/HollowClock";
@@ -12,8 +12,9 @@ import GitHub from "../../icons/GitHub";
 import Sparks from "../../icons/Sparks";
 import PagnationDot from "../../icons/PagnationDot";
 import Gem from "../../icons/Gem";
+import ArrowDown from "../../icons/ArrowDown";
 function StudentProfile({ user }) {
-  console.log(user);
+  console.log((4.5 / 5) * 100);
   return (
     <div className={styles.profileContainer}>
       <div className={styles.firstContainer}>
@@ -180,18 +181,187 @@ function StudentProfile({ user }) {
         </div>
       </div>
       <div className={styles.skillsHeaderBtn}>
-        גלו את הכישורים שלי <Gem />
+        <span>גלו את הכישורים שלי </span>
+        <Gem />
       </div>
       <div className={styles.skillsContainer}>
-        <div className={styles.skillsHeader}></div>
-        <div className={styles.techSkillsContainer}>
-          <div>
-            <h3></h3>
-          </div>
-          <div className={styles.skillListsContainer}></div>
-          <div className={styles.moreSkils}></div>
+        <div className={styles.skillsHeader}>
+          <h2>כישורים</h2>
         </div>
-        <div className={styles.softSkillsBox}></div>
+        <div>
+          {" "}
+          <div className={styles.techSkillsContainer}>
+            <div>
+              <h3>מומחיות טכנולוגית</h3>
+            </div>
+            <div className={styles.skillListsContainer}>
+              <div className={styles.singleTechSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleTechSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleTechSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleTechSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleTechSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(3 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>3</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.moreSkils}>
+              כישורים נוספים <ArrowDown />
+            </div>
+          </div>
+          <div className={styles.softSkillsContainer}>
+            <div>
+              <h3>מומחיות טכנולוגית</h3>
+            </div>
+            <div className={styles.skillListsContainer}>
+              <div className={styles.singleSoftSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleSoftSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleSoftSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleSoftSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(4.5 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>4.5</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.singleSoftSkill}>
+                <div className={styles.skillRatingGraph}>
+                  <div className={styles.originLine}></div>
+                  <div
+                    style={{ height: `${(3 / 5) * 100}%` }}
+                    className={styles.ratingLine}></div>
+                </div>
+                <div className={styles.skilRatingText}>
+                  <div className={styles.skillName}>Java</div>
+                  <div className={styles.skillRatingNumber}>
+                    <span>3</span>
+                    <span className={styles.maxRatingSkill}>/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.moreSkils}>
+              {" "}
+              כישורים נוספים <ArrowDown />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
