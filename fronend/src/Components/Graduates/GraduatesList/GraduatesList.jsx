@@ -4,12 +4,14 @@ function GraduatesList() {
   return (
     <>
       <div>
-        <p id="">שם</p>
-        <p id="">מיומנות</p>
-        <p id="">דירוג</p>
-        <p id="">סטטוס</p>
-        <p id="">פרופיל</p>
-        <p id="">הודעה</p>
+        <p id="profileImg"></p>
+        <p id="name">שם</p>
+        <p id="profession">מקצוע</p>
+        <p id="skills">מיומנות</p>
+        <p id="rating">דירוג</p>
+        <p id="status">סטטוס</p>
+        <p id="profile">פרופיל</p>
+        <p id="message">הודעה</p>
         <GraduatesListCard />
       </div>
     </>

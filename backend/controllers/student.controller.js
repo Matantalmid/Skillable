@@ -13,6 +13,17 @@ const getAllStudents = async (req, res) => {
   }
 };
 
+const getStudentsByCollege = async (req, res) => {
+  const { collegeId } = req.params;
+  try {
+    const studentList = await Student.find({college: collegeId});
+    return res.send(studentList);
+  } catch (error) {
+    console.log(error);
+    res.status(400).send("Error");
+  }
+};
+
 //^ register as Student
 //? maybe we should do register idk :P
 const register = async (req, res) => {
@@ -24,7 +35,13 @@ const register = async (req, res) => {
   }
   try {
     const hash = await bcrypt.hash(password, 10);
-    const student = new Student({ email, password: hash, firstName, lastName, applyJobs });
+    const student = new Student({
+      email,
+      password: hash,
+      firstName,
+      lastName,
+      applyJobs,
+    });
 
     await student.save();
     const token = generateToken({
@@ -123,6 +140,7 @@ module.exports = {
   getStudentById,
   updateStudent,
   deleteStudent,
+  getStudentsByCollege,
   login,
   register,
 };
