@@ -1,7 +1,10 @@
 const { Student } = require("../models/student.model");
 const bcrypt = require("bcryptjs");
 const { generateToken, verifyToken } = require("../utils/jwt");
-
+const {
+  sendWelcomeEmail,
+  sendResetPasswordEmail,
+} = require("../services/email/sendEmail");
 //^ get All Students
 const getAllStudents = async (req, res) => {
   try {
@@ -52,7 +55,7 @@ const register = async (req, res) => {
       role: "student",
     });
 
-    // await sendWelcomeEmail(student.email, "welcome", { name: student.fullName });
+    await sendWelcomeEmail(student.email, "welcome", { name: firstName });
 
     return res.send({
       student: {

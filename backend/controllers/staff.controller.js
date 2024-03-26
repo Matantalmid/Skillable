@@ -1,7 +1,10 @@
 const { Staff } = require("../models/staff.model");
 const bcrypt = require("bcryptjs");
 const { generateToken, verifyToken } = require("../utils/jwt");
-
+const {
+  sendWelcomeEmail,
+  sendResetPasswordEmail,
+} = require("../services/email/sendEmail");
 //^ get All Staff
 const getAllStaff = async (req, res) => {
   try {
@@ -40,7 +43,7 @@ const register = async (req, res) => {
       lastName: lastName,
     });
 
-    // await sendWelcomeEmail(staff.email, "welcome", { name: staff.fullName });
+    await sendWelcomeEmail(staff.email, "welcome", { name: firstName });
 
     return res.send({
       staff: {
