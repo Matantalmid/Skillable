@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./jobCard.module.css";
 import EditBtn from "../../../icons/EditBtn";
+
 function JobCard({ job }) {
   console.log(job);
+
   return (
     <div className={styles.jobCard}>
       <div className={styles.detailsContainer}>

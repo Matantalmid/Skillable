@@ -111,7 +111,7 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
         ></textarea>
 
         <label htmlFor="skillRequired" className={styles.formLabel}>
-          <strong>מיומנויות נדרשות:</strong>
+          <strong>מיומנויות טכנולוגיות נדרשות:</strong>
         </label>
         <textarea
           type="text"
@@ -120,7 +120,20 @@ export default function CreateSingleJobCard({ handleChange, handleSubmit }) {
           onChange={handleChange}
           className={styles.formInput}
           rows="5"
-          placeholder="הזן מיומנויות נדרשות"
+          placeholder="הזן מיומנויות טכנולוגיות נדרשות"
+        />
+
+        <label htmlFor="skillRequired" className={styles.formLabel}>
+          <strong>מיומנויות רכות נדרשות:</strong>
+        </label>
+        <textarea
+          type="text"
+          id="skillRequired"
+          name="skillRequired"
+          onChange={handleChange}
+          className={styles.formInput}
+          rows="5"
+          placeholder="הזן מיומנויות רכות נדרשות"
         />
 
         <label htmlFor="responsibilities" className={styles.formLabel}>

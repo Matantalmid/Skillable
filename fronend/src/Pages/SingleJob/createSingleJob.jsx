@@ -5,6 +5,8 @@ import { UserContext } from "../../Context/User";
 import axios from "axios";
 import { baseUrl } from "../../utils/backEndUtils";
 
+//implement cloudinary for company cover iamge
+
 export default function CreateJobPage() {
   const [formData, setFormData] = useState({});
   const { user } = useContext(UserContext);

@@ -9,8 +9,10 @@ import Profile from "./Pages/Profile/Profile";
 import MyProfile from "./Pages/Profile/MyProfile";
 import CreateJobPage from "./Pages/SingleJob/createSingleJob";
 import Graduates from "./Pages/Graduates/Graduates";
+import EditJob from "./Pages/EditJob/EditJob";
 import { UserContext } from "./Context/User";
 import { useContext } from "react";
+
 function App() {
   const { user } = useContext(UserContext);
 
@@ -23,6 +25,7 @@ function App() {
             <Route path="/Auth" element={<Auth />} />
             <Route path="/" element={<Home />} />
             <Route path="/Jobs" element={<AllJobs />} />
+            <Route path="/edit-job" element={<EditJob />} /> 
             <Route path="/Graduates" element={<Graduates />} />
             <Route path="/MyProfile" element={<MyProfile />} />
             <Route path="/Profile/:id" element={<Profile />} />
