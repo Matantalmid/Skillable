@@ -1,7 +1,10 @@
 const { HR } = require("../models/hr.model");
 const bcrypt = require("bcryptjs");
 const { generateToken, verifyToken } = require("../utils/jwt");
-
+const {
+  sendWelcomeEmail,
+  sendResetPasswordEmail,
+} = require("../services/email/sendEmail");
 //^ get All HR
 const getAllHR = async (req, res) => {
   try {
@@ -40,6 +43,7 @@ const register = async (req, res) => {
       lastName,
     });
 
+    await sendWelcomeEmail(hr.email, "welcome", { name: firstName });
 
     return res.send({
       hr: {
@@ -60,7 +64,7 @@ const register = async (req, res) => {
 //^ login  as HR
 const login = async (req, res) => {
   const { email, password } = req.body;
-  
+
   try {
     const hr = await HR.findOne({ email });
     if (hr) {
@@ -98,7 +102,6 @@ const getHRById = async (req, res) => {
     res.status(400).send("Error");
   }
 };
-
 
 //^ update
 const updateHR = async (req, res) => {
