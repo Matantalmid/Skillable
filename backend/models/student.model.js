@@ -40,7 +40,7 @@ const studentSchema = new mongoose.Schema({
     github: { type: String },
   },
 
-  contactInfo: { frame: { type: String }, location: { type: String } },
+  // contactInfo: { frame: { type: String }, location: { type: String } }, //! need to change name
   recruitmentStatus: { status: { type: String, default: "פנוי" } }, //the recruitment status
   about: {
     desc: { type: String },

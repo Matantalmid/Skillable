@@ -4,7 +4,7 @@ const jobSchema = new mongoose.Schema({
   name: { type: String, require: true },
   coverImg: { type: String },
   description: { type: String, require: true },
-  skillRequired: { type: String, require: true },
+  skillRequired: { type: String, require: true }, //!need to connnect to the skill model.
   responsiblies: { type: String, require: true },
   profession: { type: String, require: true },
 
